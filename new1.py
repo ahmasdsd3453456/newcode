@@ -447,15 +447,14 @@ async def play_video(driver, url, timer):
 # Function to handle multiple videos dynamically using Selenium
 async def handle_videos(urls):
     options = Options()
-    options.headless = True  # Running in headless mode
-    options.add_argument("--no-sandbox")  # Disables the sandbox, necessary for some environments
-    options.add_argument("--disable-dev-shm-usage")  # Fixes issues with shared memory in Docker environments
-    options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
-    options.add_argument("--disable-gpu")  # Disables GPU hardware acceleration (useful in headless mode)
-    options.add_argument("--headless")  # Ensure Chrome is in headless mode
-    options.add_argument("--disable-software-rasterizer")  # Disables software rasterizer
-    service = Service(ChromeDriverManager().install())  # Automatically downloads the correct ChromeDriver
-    driver = webdriver.Chrome(service=service, options=options)
+    options.headless = True
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+
+# Make sure the ChromeDriver is compatible with your version of Chrome
+    service = Service(ChromeDriverManager().install())  # This should automatically download the correct version of ChromeDriver
+    driver = webdriver.Chrome(options=options)
     
     try:
         tasks = []
