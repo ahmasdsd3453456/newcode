@@ -72,7 +72,7 @@ def check_cookies_working(cookies_file_path, username, password):
         options.add_argument("--headless")  # Run in headless mode
         options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
         options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
-        options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+        #options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
 
         # Initialize the WebDriver with the necessary options
         service = Service(ChromeDriverManager().install())
@@ -448,7 +448,7 @@ async def handle_videos(urls):
     options.add_argument("--headless")  # Run in headless mode
     options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
     options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
-    options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+    #options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
 
         # Initialize the WebDriver with the necessary options
     service = Service(ChromeDriverManager().install())
