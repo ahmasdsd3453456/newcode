@@ -410,7 +410,7 @@ async def handle_videos(urls):
                 continue
             task = asyncio.create_task(play_video(context, url, timer))
             tasks.add(task)
-            if len(tasks) >= 6:
+            if len(tasks) >= 2:
                 done, tasks = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
                 print(f"Task completed. Remaining tasks: {len(tasks)}")
         if tasks:
