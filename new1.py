@@ -14,6 +14,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.service import Service
 import asyncio
 import os
 
@@ -69,13 +70,14 @@ def check_cookies_working(cookies_file_path, username, password):
         
         # Set up Selenium with Chrome options and webdriver manager
         options = Options()
-        options.add_argument("--headless")  # Run in headless mode
-        options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
-        options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
-        #options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
-
-        # Initialize the WebDriver with the necessary options
-        service = Service(ChromeDriverManager().install())
+        options.headless = True  # Running in headless mode
+        options.add_argument("--no-sandbox")  # Disables the sandbox, necessary for some environments
+        options.add_argument("--disable-dev-shm-usage")  # Fixes issues with shared memory in Docker environments
+        options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+        options.add_argument("--disable-gpu")  # Disables GPU hardware acceleration (useful in headless mode)
+        options.add_argument("--headless")  # Ensure Chrome is in headless mode
+        options.add_argument("--disable-software-rasterizer")  # Disables software rasterizer
+        service = Service(ChromeDriverManager().install())  # Automatically downloads the correct ChromeDriver
         driver = webdriver.Chrome(service=service, options=options)
         
         # Go to login page
@@ -445,13 +447,14 @@ async def play_video(driver, url, timer):
 # Function to handle multiple videos dynamically using Selenium
 async def handle_videos(urls):
     options = Options()
-    options.add_argument("--headless")  # Run in headless mode
-    options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
-    options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
-    #options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
-
-        # Initialize the WebDriver with the necessary options
-    service = Service(ChromeDriverManager().install())
+    options.headless = True  # Running in headless mode
+    options.add_argument("--no-sandbox")  # Disables the sandbox, necessary for some environments
+    options.add_argument("--disable-dev-shm-usage")  # Fixes issues with shared memory in Docker environments
+    options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+    options.add_argument("--disable-gpu")  # Disables GPU hardware acceleration (useful in headless mode)
+    options.add_argument("--headless")  # Ensure Chrome is in headless mode
+    options.add_argument("--disable-software-rasterizer")  # Disables software rasterizer
+    service = Service(ChromeDriverManager().install())  # Automatically downloads the correct ChromeDriver
     driver = webdriver.Chrome(service=service, options=options)
     
     try:
