@@ -69,9 +69,12 @@ def check_cookies_working(cookies_file_path, username, password):
         
         # Set up Selenium with Chrome options and webdriver manager
         options = Options()
-        options.headless = True  # Running Chrome in headless mode (background)
-        
-        # Initialize the WebDriver
+        options.add_argument("--headless")  # Run in headless mode
+        options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
+        options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
+        options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+
+        # Initialize the WebDriver with the necessary options
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
         
@@ -442,11 +445,13 @@ async def play_video(driver, url, timer):
 # Function to handle multiple videos dynamically using Selenium
 async def handle_videos(urls):
     options = Options()
-    options.headless = True
-    chrome_driver_path = ChromeDriverManager().install()
-    # Create a Service object with the path to ChromeDriver
-    service = Service(executable_path=chrome_driver_path)
-    # Initialize the WebDriver with the Service object
+    options.add_argument("--headless")  # Run in headless mode
+    options.add_argument("--no-sandbox")  # Disable sandbox (important for Docker and some Linux environments)
+    options.add_argument("--disable-dev-shm-usage")  # Disable /dev/shm usage (prevents crash in Docker environments)
+    options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging
+
+        # Initialize the WebDriver with the necessary options
+    service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
     
     try:
