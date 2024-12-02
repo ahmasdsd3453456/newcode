@@ -50,31 +50,57 @@ def load_cookies(cookies_file_path):
 
 
 
-def check_cookies_working(cookies_file_path,username,password): 
-    cookies = load_cookies(cookies_file_path)  
+def check_cookies_working(cookies_file_path, username, password):
+    # Load cookies
+    cookies = load_cookies(cookies_file_path)
+    
     url = "https://seo-fast.ru/payment_user"
+    
+    # Check the page with cookies
     response = requests.get(url, headers=headers, cookies=cookies)
     soup = BeautifulSoup(response.text, 'html.parser')
+    
     balance_element = soup.find('span', {'style': 'color: #ffffff; font-weight: bold; text-shadow: 0 0 2px rgba(158,157,157,0.4);'})
     if balance_element:
         balance = balance_element.get_text(strip=True)
         print(f"Balance: {balance}")
     else:
-        print("Cookie expire loging in wait....")
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)  # Set headless=True for background mode
-            page = browser.new_page()
-            login_url = "https://seo-fast.ru/login"
-            page.goto(login_url)
-            page.fill('#logusername', username)  # Email input field
-            page.fill('#logpassword', password)  # Password input field
-            page.click('a.sf_button:has-text("Вход")')  # This targets the login button by its text
-            time.sleep(10)
-            cookies = page.context.cookies()  # Get all cookies after login
-            with open(cookies_file_path, "w") as f:
-                json.dump(cookies, f, indent=4)
-            print(f"Cookies have been saved to {cookies_file_path}.")
-            browser.close()
+        print("Cookies expired. Logging in again...")
+        
+        # Set up Selenium with Chrome options and webdriver manager
+        options = Options()
+        options.headless = True  # Running Chrome in headless mode (background)
+        
+        # Initialize the WebDriver
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        
+        # Go to login page
+        login_url = "https://seo-fast.ru/login"
+        driver.get(login_url)
+        
+        # Fill in the login form
+        driver.find_element(By.ID, 'logusername').send_keys(username)
+        driver.find_element(By.ID, 'logpassword').send_keys(password)
+        
+        # Click the login button
+        login_button = driver.find_element(By.CSS_SELECTOR, 'a.sf_button:has-text("Вход")')
+        login_button.click()
+        
+        # Wait for login to complete (you can adjust the time depending on the website speed)
+        time.sleep(10)
+        
+        # Get cookies after login
+        cookies = driver.get_cookies()
+        
+        # Save cookies to file
+        with open(cookies_file_path, "w") as f:
+            json.dump(cookies, f, indent=4)
+        
+        print(f"Cookies have been saved to {cookies_file_path}.")
+        
+        # Close the browser
+        driver.quit()
 
 
 
