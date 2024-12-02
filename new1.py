@@ -451,10 +451,10 @@ async def handle_videos(urls):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
-
+    driver_path = "/usr/local/bin/chromedriver"  # Change this if necessary
 # Make sure the ChromeDriver is compatible with your version of Chrome
-    service = Service(ChromeDriverManager().install())  # This should automatically download the correct version of ChromeDriver
-    driver = webdriver.Chrome(options=options)
+    service = Service(driver_path)  # This should automatically download the correct version of ChromeDriver
+    driver = webdriver.Chrome(service=service, options=options)
     
     try:
         tasks = []
