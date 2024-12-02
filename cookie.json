@@ -1,0 +1,312 @@
+[
+    {
+        "name": "PHPSESSID",
+        "value": "aocp32a6cgtcj3r6ttchusk503",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "tmr_lvid",
+        "value": "ec71c5b0a6b1cf138c6272a3db73d146",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1761797761,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "tmr_lvidTS",
+        "value": "1733026546425",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1761797761,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ym_uid",
+        "value": "1733026550235060660",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1764562550,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_ym_d",
+        "value": "1733026550",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1764562550,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bh",
+        "value": "EkIiSGVhZGxlc3NDaHJvbWUiO3Y9IjEzMSIsICJDaHJvbWl1bSI7dj0iMTMxIiwgIk5vdF9BIEJyYW5kIjt2PSIyNCIqAj8wOgkiV2luZG93cyJg9sWvugY=",
+        "domain": ".metrika-informer.com",
+        "path": "/",
+        "expires": 1767586550,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yashr",
+        "value": "4760432921733026551",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1764562551.412048,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "ymex",
+        "value": "2048386551.yrts.1733026551#2048386551.yrtsi.1733026551",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1764562551.468632,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yabs-sid",
+        "value": "458133701733026551",
+        "domain": "mc.yandex.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "i",
+        "value": "22blXmxr7LTJhdyJ4ne+lW5ouNqOm2gNomTrfPo3IvyV7JL9a6l5npYmbi1ksjSdkK2nmyxIkLIbKJrd3RdIppC+7cI=",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1767586551.468415,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yandexuid",
+        "value": "1221479371733026551",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1767586551.468503,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yuidss",
+        "value": "1221479371733026551",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1767586551.468569,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bh",
+        "value": "EkIiSGVhZGxlc3NDaHJvbWUiO3Y9IjEzMSIsICJDaHJvbWl1bSI7dj0iMTMxIiwgIk5vdF9BIEJyYW5kIjt2PSIyNCIqAj8wOgkiV2luZG93cyJg98WvugY=",
+        "domain": ".yandex.ru",
+        "path": "/",
+        "expires": 1767586551.468772,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "domain_sid",
+        "value": "AEnR6vomsYh6y0ZrhU5u2%3A1733026551951",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": 1733631351.952009,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ym_isad",
+        "value": "2",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1733098552,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_ym_visorc",
+        "value": "w",
+        "domain": ".seo-fast.ru",
+        "path": "/",
+        "expires": 1733028353,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "sync_cookie_csrf",
+        "value": "461758141fake",
+        "domain": ".mc.webvisor.org",
+        "path": "/",
+        "expires": 1733027153.822141,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bh",
+        "value": "EkIiSGVhZGxlc3NDaHJvbWUiO3Y9IjEzMSIsICJDaHJvbWl1bSI7dj0iMTMxIiwgIk5vdF9BIEJyYW5kIjt2PSIyNCIqAj8wOgkiV2luZG93cyJg+cWvugY=",
+        "domain": ".webvisor.org",
+        "path": "/",
+        "expires": 1767586553.822468,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "sync_cookie_csrf",
+        "value": "1607330775fake",
+        "domain": ".mc.yandex.ru",
+        "path": "/",
+        "expires": 1733027154.122143,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yandexuid",
+        "value": "1221479371733026551",
+        "domain": ".webvisor.org",
+        "path": "/",
+        "expires": 1767586554.456529,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "yuidss",
+        "value": "1221479371733026551",
+        "domain": ".webvisor.org",
+        "path": "/",
+        "expires": 1767586554.456761,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "i",
+        "value": "22blXmxr7LTJhdyJ4ne+lW5ouNqOm2gNomTrfPo3IvyV7JL9a6l5npYmbi1ksjSdkK2nmyxIkLIbKJrd3RdIppC+7cI=",
+        "domain": ".webvisor.org",
+        "path": "/",
+        "expires": 1767586554.456891,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "sync_cookie_ok",
+        "value": "synced",
+        "domain": ".mc.webvisor.org",
+        "path": "/",
+        "expires": 1733112954.457023,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "evercookie_png",
+        "value": "df2e0309b5ba4884f9c755046e244514",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "entrance",
+        "value": "df2e0309b5ba4884f9c755046e244514",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": 1767586557.854053,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "evercookie_etag",
+        "value": "undefined",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": 1767586558.81227,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "evercookie_cache",
+        "value": "undefined",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": 1767586558.814615,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "hostname_sf",
+        "value": "seo-fast.ru",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "IDE",
+        "value": "AHWqTUlm3obvuUIXWfFLoWCr4KrvA4GdKHhCJMdXXe9H0rafvvlLOx6yWY6nj7JPelA",
+        "domain": ".doubleclick.net",
+        "path": "/",
+        "expires": 1767586561.398049,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_ym_visarc_4246183123",
+        "value": "d79038848a1e030077f6319dbd8012c8",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "tmr_detect",
+        "value": "0%7C1733026564673",
+        "domain": "seo-fast.ru",
+        "path": "/",
+        "expires": 1733112964,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    }
+]
