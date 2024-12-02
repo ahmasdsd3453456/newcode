@@ -43,7 +43,7 @@ def load_cookies(cookies_file_path):
 def check_cookies_working(cookies_file_path,username,password): 
     cookies = load_cookies(cookies_file_path)  
     url = "https://seo-fast.ru/payment_user"
-    response = requests.get(url, headers=headers, cookies=cookies)
+    response = requests.get(url, headers=headers, cookies=cookies, verify=False)
     soup = BeautifulSoup(response.text, 'html.parser')
     balance_element = soup.find('span', {'style': 'color: #ffffff; font-weight: bold; text-shadow: 0 0 2px rgba(158,157,157,0.4);'})
     if balance_element:
